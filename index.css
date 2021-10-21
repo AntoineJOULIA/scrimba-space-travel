@@ -6,7 +6,6 @@
   --clr-dark: 230 35% 7%;
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
-  --clr-alpha: 1;
 
   /* font sizes */
   --fs-900: 9.375rem;
@@ -115,7 +114,6 @@ select {
 
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
-  outline: 1px solid red;
 }
 
 .container {
@@ -139,13 +137,13 @@ select {
 /* colors */
 
 .bg-dark {
-  background-color: hsl(var(--clr-dark) / var(--clr-alpha));
+  background-color: hsl(var(--clr-dark));
 }
 .bg-accent {
-  background-color: hsl(var(--clr-light) / var(--clr-alpha));
+  background-color: hsl(var(--clr-light));
 }
 .bg-white {
-  background-color: hsl(var(--clr-white) / var(--clr-alpha));
+  background-color: hsl(var(--clr-white));
 }
 
 .text-dark {
@@ -225,4 +223,36 @@ select {
   margin-right: 0.5em;
   font-weight: 700;
   color: hsl(var(--clr-white) / 0.25);
+}
+
+/* ------------------------ */
+/* Components               */
+/* ------------------------ */
+
+.large-button {
+  position: relative;
+  display: grid;
+  z-index: 1;
+  place-items: center;
+  padding: 0 2em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  text-decoration: none;
+}
+
+.large-button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-color: hsl(var(--clr-white) / 0.25);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+  opacity: 1;
+  transform: scale(1.5);
 }
