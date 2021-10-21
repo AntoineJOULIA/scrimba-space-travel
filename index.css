@@ -5,6 +5,7 @@
   --clr-dark: 230 35% 7%;
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
+  --clr-alpha: 1;
 }
 
 /* ------------------------ */
@@ -103,25 +104,33 @@ select {
 /* colors */
 
 .bg-dark {
-  background-color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-dark) / var(--clr-alpha));
 }
 
 .bg-accent {
-  background-color: hsl(var(--clr-light) / 1);
+  background-color: hsl(var(--clr-light) / var(--clr-alpha));
 }
 
 .bg-white {
-  background-color: hsl(var(--clr-white) / 1);
+  background-color: hsl(var(--clr-white) / var(--clr-alpha));
 }
 
 .text-dark {
-  color: hsl(var(--clr-dark) / 1);
+  color: hsl(var(--clr-dark));
 }
 
 .text-accent {
-  color: hsl(var(--clr-light) / 1);
+  color: hsl(var(--clr-light));
 }
 
 .text-white {
-  color: hsl(var(--clr-white) / 1);
+  color: hsl(var(--clr-white));
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.title > span {
+  color: hsl(var(--clr-light) / 0.2);
 }
