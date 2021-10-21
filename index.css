@@ -1,4 +1,13 @@
 /* ------------------------ */
+/* Custom properties        */
+/* ------------------------ */
+:root {
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+}
+
+/* ------------------------ */
 /* Reset                    */
 /* ------------------------ */
 
@@ -61,6 +70,8 @@ select {
 /* Utility classes          */
 /* ------------------------ */
 
+/* general */
+
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -87,4 +98,30 @@ select {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+/* colors */
+
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+
+.bg-accent {
+  background-color: hsl(var(--clr-light) / 1);
+}
+
+.bg-white {
+  background-color: hsl(var(--clr-white) / 1);
+}
+
+.text-dark {
+  color: hsl(var(--clr-dark) / 1);
+}
+
+.text-accent {
+  color: hsl(var(--clr-light) / 1);
+}
+
+.text-white {
+  color: hsl(var(--clr-white) / 1);
 }
