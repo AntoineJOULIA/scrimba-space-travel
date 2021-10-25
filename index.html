@@ -5,17 +5,50 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/png" sizes="32x32">
 	<title>Space Travel</title>
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+		rel="stylesheet">
+	<!-- Our custom CSS -->
 	<link rel="stylesheet" href="index.css">
 </head>
 
-<body>
-	<div class="container grid">
-		<div class="box">a</div>
-		<div class="box">b</div>
-		<div class="box sr-only">c</div>
-		<div class="box">d</div>
-	</div>
+<body class="home">
+	<header class="primary-header flex">
+		<div>
+			<img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
+		</div>
+		<!-- <nav>
+			<ul class="primary-navigation underline-indicators flex">
+				<li class="active"><a href="index.html"
+						class="ff-sans-cond text-white uppercase letter-spacing-2"><span>00</span>Home</a></li>
+				<li><a href="destination.html"
+						class="ff-sans-cond text-white uppercase letter-spacing-2"><span>01</span>Destination</a></li>
+				<li><a href="crew.html"
+						class="ff-sans-cond text-white uppercase letter-spacing-2"><span>02</span>Crew</a></li>
+				<li><a href="technology.html"
+						class="ff-sans-cond text-white uppercase letter-spacing-2"><span>03</span>Technology</a></li>
+			</ul>
+		</nav> -->
+	</header>
+	<main class="grid-container grid-container--home">
+		<div>
+			<h1 class="text-accent ff-sans-cond fs-500 uppercase letter-spacing-1">So, you want to travel to
+				<span class="text-white ff-serif fs-900 uppercase d-block">space</span>
+			</h1>
+			<p class="text-accent">Let’s face it; if you want to go to space, you might as well genuinely go to outer
+				space and not hover
+				kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world
+				experience!</p>
+		</div>
+		<div>
+			<a href="#" class="large-button bg-white text-dark ff-serif uppercase">Explore</a>
+		</div>
+	</main>
 
 	<script src="index.pack.js"></script>
 </body>
