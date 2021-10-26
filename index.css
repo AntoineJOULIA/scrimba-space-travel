@@ -562,7 +562,6 @@ body {
 
 .grid-container p:not([class]) {
   max-width: 50ch;
-  outline: 3px solid limegreen;
 }
 
 .numbered-title {
