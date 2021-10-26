@@ -100,7 +100,7 @@ body {
 img,
 picture {
   max-width: 100%;
-  display: block;
+  /* display: block; */ /* prevents the hidden attribute from working*/
 }
 
 /* make forms easier to work with */
