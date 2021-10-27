@@ -712,7 +712,3 @@ body {
     justify-self: center;
   }
 }
-
-[role="tab"]:focus {
-  color: limegreen;
-}
