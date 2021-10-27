@@ -103,6 +103,10 @@ picture {
   /* display: block; */ /* prevents the hidden attribute from working*/
 }
 
+img {
+  display: block;
+}
+
 /* make forms easier to work with */
 input,
 button,
@@ -693,10 +697,12 @@ body {
   }
 
   .grid-container--crew {
+    --container-gap: 5rem;
     justify-items: start;
     align-content: start;
+    align-content: center;
     grid-template-areas:
-      ".  title  title ."
+      ".  title  image ."
       ". content image ."
       ".  dots   image .";
   }
@@ -705,4 +711,8 @@ body {
     align-self: end;
     justify-self: center;
   }
+}
+
+[role="tab"]:focus {
+  color: limegreen;
 }
