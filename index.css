@@ -552,6 +552,24 @@ body {
   }
 }
 
+/* technology */
+
+.technology {
+  background-image: url(./assets/technology/background-technology-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+  .technology {
+    background-image: url(./assets/technology/background-technology-tablet.jpg);
+  }
+}
+
+@media (min-width: 45rem) {
+  .technology {
+    background-image: url(./assets/technology/background-technology-desktop.jpg);
+  }
+}
+
 /* ------------------------ */
 /* Layout                   */
 /* ------------------------ */
@@ -636,6 +654,31 @@ body {
   color: hsl(var(--clr-white) / 0.5);
 }
 
+/* technology layout */
+.grid-container--technology {
+  --flow-space: 0.5rem;
+  padding-inline: 0;
+  grid-template-areas:
+    "title"
+    "image"
+    "numbers"
+    "content";
+}
+
+.grid-container--technology > picture {
+  grid-area: image;
+}
+
+.grid-container--technology > .number-indicators {
+  grid-area: numbers;
+}
+
+.grid-container--technology > .technology-details {
+  padding-inline: 1rem;
+  max-width: 50ch;
+  grid-area: content;
+}
+
 @media (min-width: 35rem) {
   .numbered-title {
     justify-self: start;
@@ -654,6 +697,10 @@ body {
       "content"
       "dots"
       "image";
+  }
+
+  .grid-container--technology > .numbered-title {
+    padding-inline: 1rem;
   }
 }
 
@@ -716,5 +763,28 @@ body {
     align-self: end;
     justify-self: center;
     max-width: 90%;
+  }
+
+  .grid-container--technology {
+    /* --container-gap: 5rem; */
+    grid-template-columns: minmax(1rem, 1fr) 4rem repeat(2, minmax(0, 35rem));
+    grid-template-areas:
+      ". title title title"
+      ". numbers content image";
+  }
+
+  .grid-container--technology > .number-indicators {
+    --gap: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-container--technology > .number-indicators > * {
+    font-size: var(--fs-600);
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .grid-container--technology > picture {
+    justify-self: end;
   }
 }
